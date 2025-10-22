@@ -11,74 +11,89 @@ var wms_layers = [];
                 url: 'https://mt1.google.com/vt/lyrs=s&x={x}&y={y}&z={z}'
             })
         });
-var format_ALMADAPAV1_1 = new ol.format.GeoJSON();
-var features_ALMADAPAV1_1 = format_ALMADAPAV1_1.readFeatures(json_ALMADAPAV1_1, 
+var format_Pavimento1_1 = new ol.format.GeoJSON();
+var features_Pavimento1_1 = format_Pavimento1_1.readFeatures(json_Pavimento1_1, 
             {dataProjection: 'EPSG:4326', featureProjection: 'EPSG:3857'});
-var jsonSource_ALMADAPAV1_1 = new ol.source.Vector({
+var jsonSource_Pavimento1_1 = new ol.source.Vector({
     attributions: ' ',
 });
-jsonSource_ALMADAPAV1_1.addFeatures(features_ALMADAPAV1_1);
-var lyr_ALMADAPAV1_1 = new ol.layer.Vector({
+jsonSource_Pavimento1_1.addFeatures(features_Pavimento1_1);
+var lyr_Pavimento1_1 = new ol.layer.Vector({
                 declutter: false,
-                source:jsonSource_ALMADAPAV1_1, 
-                style: style_ALMADAPAV1_1,
-                popuplayertitle: 'ALMADA - PAV. 1',
+                source:jsonSource_Pavimento1_1, 
+                style: style_Pavimento1_1,
+                popuplayertitle: 'Pavimento 1',
                 interactive: true,
-    title: 'ALMADA - PAV. 1<br />\
-    <img src="styles/legend/ALMADAPAV1_1_0.png" /> AUDIN<br />\
-    <img src="styles/legend/ALMADAPAV1_1_1.png" /> BIUNILA<br />\
-    <img src="styles/legend/ALMADAPAV1_1_2.png" /> COMPARTILHADO<br />\
-    <img src="styles/legend/ALMADAPAV1_1_3.png" /> CORREGEDORIA<br />\
-    <img src="styles/legend/ALMADAPAV1_1_4.png" /> EaD<br />\
-    <img src="styles/legend/ALMADAPAV1_1_5.png" /> EdUNILA<br />\
-    <img src="styles/legend/ALMADAPAV1_1_6.png" /> ILAACH<br />\
-    <img src="styles/legend/ALMADAPAV1_1_7.png" /> ILACVN<br />\
-    <img src="styles/legend/ALMADAPAV1_1_8.png" /> ILACVN/ILATIT<br />\
-    <img src="styles/legend/ALMADAPAV1_1_9.png" /> ILAESP<br />\
-    <img src="styles/legend/ALMADAPAV1_1_10.png" /> ILATIT<br />\
-    <img src="styles/legend/ALMADAPAV1_1_11.png" /> IMEA<br />\
-    <img src="styles/legend/ALMADAPAV1_1_12.png" /> OUVIDORIA<br />\
-    <img src="styles/legend/ALMADAPAV1_1_13.png" /> PPGIES<br />\
-    <img src="styles/legend/ALMADAPAV1_1_14.png" /> PRAE<br />\
-    <img src="styles/legend/ALMADAPAV1_1_15.png" /> PROAGI<br />\
-    <img src="styles/legend/ALMADAPAV1_1_16.png" /> PROCURADORIA<br />\
-    <img src="styles/legend/ALMADAPAV1_1_17.png" /> PROEX<br />\
-    <img src="styles/legend/ALMADAPAV1_1_18.png" /> PROGEPE<br />\
-    <img src="styles/legend/ALMADAPAV1_1_19.png" /> PROGRAD<br />\
-    <img src="styles/legend/ALMADAPAV1_1_20.png" /> PROINT<br />\
-    <img src="styles/legend/ALMADAPAV1_1_21.png" /> PROPLAN<br />\
-    <img src="styles/legend/ALMADAPAV1_1_22.png" /> PRPPG<br />\
-    <img src="styles/legend/ALMADAPAV1_1_23.png" /> PRU<br />\
-    <img src="styles/legend/ALMADAPAV1_1_24.png" /> REITORIA<br />\
-    <img src="styles/legend/ALMADAPAV1_1_25.png" /> SACT<br />\
-    <img src="styles/legend/ALMADAPAV1_1_26.png" /> SECAFE<br />\
-    <img src="styles/legend/ALMADAPAV1_1_27.png" /> SECOM<br />\
-    <img src="styles/legend/ALMADAPAV1_1_28.png" /> Uso comum<br />\
-    <img src="styles/legend/ALMADAPAV1_1_29.png" /> <br />' });
-var format_limites_2 = new ol.format.GeoJSON();
-var features_limites_2 = format_limites_2.readFeatures(json_limites_2, 
+    title: 'Pavimento 1<br />\
+    <img src="styles/legend/Pavimento1_1_0.png" /> Acadêmico<br />\
+    <img src="styles/legend/Pavimento1_1_1.png" /> Administrativo<br />\
+    <img src="styles/legend/Pavimento1_1_2.png" /> Atend. Individualizado<br />\
+    <img src="styles/legend/Pavimento1_1_3.png" /> Auditório<br />\
+    <img src="styles/legend/Pavimento1_1_4.png" /> Biblioteca<br />\
+    <img src="styles/legend/Pavimento1_1_5.png" /> Circulação<br />\
+    <img src="styles/legend/Pavimento1_1_6.png" /> Convivência<br />\
+    <img src="styles/legend/Pavimento1_1_7.png" /> Copa – Cozinha – Cantina<br />\
+    <img src="styles/legend/Pavimento1_1_8.png" /> Depósito<br />\
+    <img src="styles/legend/Pavimento1_1_9.png" /> Dormitório<br />\
+    <img src="styles/legend/Pavimento1_1_10.png" /> Esporte<br />\
+    <img src="styles/legend/Pavimento1_1_11.png" /> Extensão<br />\
+    <img src="styles/legend/Pavimento1_1_12.png" /> Lab. de Informática<br />\
+    <img src="styles/legend/Pavimento1_1_13.png" /> Laboratório – Ensino<br />\
+    <img src="styles/legend/Pavimento1_1_14.png" /> Laboratório – Pesquisa<br />\
+    <img src="styles/legend/Pavimento1_1_15.png" /> Laboratório – Prática<br />\
+    <img src="styles/legend/Pavimento1_1_16.png" /> Monitoria<br />\
+    <img src="styles/legend/Pavimento1_1_17.png" /> Restaurante<br />\
+    <img src="styles/legend/Pavimento1_1_18.png" /> Reunião<br />\
+    <img src="styles/legend/Pavimento1_1_19.png" /> Sala de aula<br />\
+    <img src="styles/legend/Pavimento1_1_20.png" /> Sala de aula (Pós)<br />\
+    <img src="styles/legend/Pavimento1_1_21.png" /> Sala de estudo<br />\
+    <img src="styles/legend/Pavimento1_1_22.png" /> Sala de Professores<br />\
+    <img src="styles/legend/Pavimento1_1_23.png" /> Sala Técnica<br />\
+    <img src="styles/legend/Pavimento1_1_24.png" /> Sanitários<br />\
+    <img src="styles/legend/Pavimento1_1_25.png" /> Saúde<br />\
+    <img src="styles/legend/Pavimento1_1_26.png" /> <br />' });
+var format_Prdios_2 = new ol.format.GeoJSON();
+var features_Prdios_2 = format_Prdios_2.readFeatures(json_Prdios_2, 
             {dataProjection: 'EPSG:4326', featureProjection: 'EPSG:3857'});
-var jsonSource_limites_2 = new ol.source.Vector({
+var jsonSource_Prdios_2 = new ol.source.Vector({
     attributions: ' ',
 });
-jsonSource_limites_2.addFeatures(features_limites_2);
-var lyr_limites_2 = new ol.layer.Vector({
+jsonSource_Prdios_2.addFeatures(features_Prdios_2);
+var lyr_Prdios_2 = new ol.layer.Vector({
                 declutter: false,
-                source:jsonSource_limites_2, 
-                style: style_limites_2,
-                popuplayertitle: 'limites',
-                interactive: false,
-                title: '<img src="styles/legend/limites_2.png" /> limites'
+                source:jsonSource_Prdios_2, 
+                style: style_Prdios_2,
+                popuplayertitle: 'Prédios',
+                interactive: true,
+                title: '<img src="styles/legend/Prdios_2.png" /> Prédios'
+            });
+var format_terreno_3 = new ol.format.GeoJSON();
+var features_terreno_3 = format_terreno_3.readFeatures(json_terreno_3, 
+            {dataProjection: 'EPSG:4326', featureProjection: 'EPSG:3857'});
+var jsonSource_terreno_3 = new ol.source.Vector({
+    attributions: ' ',
+});
+jsonSource_terreno_3.addFeatures(features_terreno_3);
+var lyr_terreno_3 = new ol.layer.Vector({
+                declutter: false,
+                source:jsonSource_terreno_3, 
+                style: style_terreno_3,
+                popuplayertitle: 'terreno',
+                interactive: true,
+                title: '<img src="styles/legend/terreno_3.png" /> terreno'
             });
 
-lyr_GoogleSatellite_0.setVisible(true);lyr_ALMADAPAV1_1.setVisible(true);lyr_limites_2.setVisible(true);
-var layersList = [lyr_GoogleSatellite_0,lyr_ALMADAPAV1_1,lyr_limites_2];
-lyr_ALMADAPAV1_1.set('fieldAliases', {'FID': 'FID', 'ID': 'ID', 'ALMADA-PAV1_SALA': 'SALA', 'ALMADA-PAV1_DESCRICAO': 'DESCRICAO', 'ALMADA-PAV1_AREA': 'AREA', 'ALMADA-PAV1_CAPACIDADE': 'CAPACIDADE', 'ALMADA-PAV1_USO': 'USO', 'ALMADA-PAV1_SETOR': 'SETOR', 'ALMADA-PAV1_RESPONSAVEL': 'RESPONSAVEL', });
-lyr_limites_2.set('fieldAliases', {'ID': 'ID', });
-lyr_ALMADAPAV1_1.set('fieldImages', {'FID': 'TextEdit', 'ID': 'TextEdit', 'ALMADA-PAV1_SALA': 'TextEdit', 'ALMADA-PAV1_DESCRICAO': 'TextEdit', 'ALMADA-PAV1_AREA': 'TextEdit', 'ALMADA-PAV1_CAPACIDADE': 'Range', 'ALMADA-PAV1_USO': 'TextEdit', 'ALMADA-PAV1_SETOR': 'TextEdit', 'ALMADA-PAV1_RESPONSAVEL': 'TextEdit', });
-lyr_limites_2.set('fieldImages', {'ID': '', });
-lyr_ALMADAPAV1_1.set('fieldLabels', {'FID': 'hidden field', 'ID': 'inline label - visible with data', 'ALMADA-PAV1_SALA': 'inline label - visible with data', 'ALMADA-PAV1_DESCRICAO': 'inline label - visible with data', 'ALMADA-PAV1_AREA': 'inline label - visible with data', 'ALMADA-PAV1_CAPACIDADE': 'inline label - visible with data', 'ALMADA-PAV1_USO': 'inline label - visible with data', 'ALMADA-PAV1_SETOR': 'inline label - visible with data', 'ALMADA-PAV1_RESPONSAVEL': 'inline label - visible with data', });
-lyr_limites_2.set('fieldLabels', {'ID': 'inline label - visible with data', });
-lyr_limites_2.on('precompose', function(evt) {
+lyr_GoogleSatellite_0.setVisible(true);lyr_Pavimento1_1.setVisible(true);lyr_Prdios_2.setVisible(true);lyr_terreno_3.setVisible(true);
+var layersList = [lyr_GoogleSatellite_0,lyr_Pavimento1_1,lyr_Prdios_2,lyr_terreno_3];
+lyr_Pavimento1_1.set('fieldAliases', {'FID': 'FID', 'ID': 'ID', 'ALMADA-PAV1_SALA': 'SALA', 'ALMADA-PAV1_DESCRICAO': 'DESCRICAO', 'ALMADA-PAV1_AREA': 'AREA', 'ALMADA-PAV1_CAPACIDADE': 'CAPACIDADE', 'ALMADA-PAV1_USO': 'USO', 'ALMADA-PAV1_SETOR': 'SETOR', 'ALMADA-PAV1_RESPONSAVEL': 'RESPONSAVEL', });
+lyr_Prdios_2.set('fieldAliases', {'ID': 'ID', 'nome': 'Prédio', 'url': 'Mais info', });
+lyr_terreno_3.set('fieldAliases', {'id': 'id', 'Nome': 'Nome', 'Area': 'Area', 'Perimetro': 'Perimetro', });
+lyr_Pavimento1_1.set('fieldImages', {'FID': 'TextEdit', 'ID': 'TextEdit', 'ALMADA-PAV1_SALA': 'TextEdit', 'ALMADA-PAV1_DESCRICAO': 'TextEdit', 'ALMADA-PAV1_AREA': 'TextEdit', 'ALMADA-PAV1_CAPACIDADE': 'Range', 'ALMADA-PAV1_USO': 'TextEdit', 'ALMADA-PAV1_SETOR': 'TextEdit', 'ALMADA-PAV1_RESPONSAVEL': 'TextEdit', });
+lyr_Prdios_2.set('fieldImages', {'ID': 'TextEdit', 'nome': 'TextEdit', 'url': 'TextEdit', });
+lyr_terreno_3.set('fieldImages', {'id': 'TextEdit', 'Nome': 'TextEdit', 'Area': 'TextEdit', 'Perimetro': 'TextEdit', });
+lyr_Pavimento1_1.set('fieldLabels', {'FID': 'hidden field', 'ID': 'inline label - visible with data', 'ALMADA-PAV1_SALA': 'inline label - visible with data', 'ALMADA-PAV1_DESCRICAO': 'inline label - visible with data', 'ALMADA-PAV1_AREA': 'inline label - visible with data', 'ALMADA-PAV1_CAPACIDADE': 'inline label - visible with data', 'ALMADA-PAV1_USO': 'inline label - visible with data', 'ALMADA-PAV1_SETOR': 'inline label - visible with data', 'ALMADA-PAV1_RESPONSAVEL': 'inline label - visible with data', });
+lyr_Prdios_2.set('fieldLabels', {'ID': 'hidden field', 'nome': 'inline label - visible with data', 'url': 'inline label - visible with data', });
+lyr_terreno_3.set('fieldLabels', {'id': 'hidden field', 'Nome': 'inline label - visible with data', 'Area': 'inline label - visible with data', 'Perimetro': 'inline label - visible with data', });
+lyr_terreno_3.on('precompose', function(evt) {
     evt.context.globalCompositeOperation = 'normal';
 });
